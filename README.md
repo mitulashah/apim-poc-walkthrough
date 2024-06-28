@@ -1,20 +1,20 @@
 # API Management POC Walkthroughs
 
 1. [Setup Azure API Management Service](./docs/1-setup.md)
-2. Import APIs
-3. Secure APIs 
-4. Error Handling & Logging
-5. Statistics Logging
-6. AuthZ/AuthN
-7. SLA Enforcement
-8. Request and Schema Validation
-9. Data & Protocol Transformation
-10. Service Health Check
-11. Gateway Performance
-12. Gateway Node Management
-13. API Management Tool Integrations
-14. API Portal
-15. API Monitoring & Metrics
-16. Deployment Options
-17. Developer Experience
-18. Assess Migration Impacts
+2. [Import APIs](https://learn.microsoft.com/en-us/azure/api-management/import-and-publish)
+3. Secure APIs - [Rate Limiting](https://learn.microsoft.com/en-us/azure/api-management/transform-api#protect-an-api-by-adding-rate-limit-policy-throttling), [IP Filtering](https://learn.microsoft.com/en-us/azure/api-management/ip-filter-policy)
+4. Error Handling & Reporting - [Error Handling](https://learn.microsoft.com/en-us/azure/api-management/api-management-error-handling-policies), [Logging](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-use-azure-monitor)
+5. Statistics Logging - [Monitor](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-use-azure-monitor), [Custom Dashboards](https://learn.microsoft.com/en-us/azure/azure-monitor/visualize/tutorial-logs-dashboards)
+6. [AuthZ/AuthN](https://learn.microsoft.com/en-us/azure/api-management/authentication-authorization-overview) - [JWT Validation](https://learn.microsoft.com/en-us/azure/api-management/validate-jwt-policy), [Certificate Validation](https://learn.microsoft.com/en-us/azure/api-management/validate-client-certificate-policy), [Authorization (Products](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-add-products?tabs=azure-portal), [Subscriptions)](https://learn.microsoft.com/en-us/azure/api-management/api-management-subscriptions)
+7. SLA Enforcement - [Advanced Request Throttling / Quotas](https://learn.microsoft.com/en-us/azure/api-management/api-management-sample-flexible-throttling)
+8. Request and Schema Validation - [Parameters](https://learn.microsoft.com/en-us/azure/api-management/validate-parameters-policy), [Headers](https://learn.microsoft.com/en-us/azure/api-management/validate-headers-policy), [Content Validation / Schema](https://learn.microsoft.com/en-us/azure/api-management/validate-content-policy)
+9. Data & Protocol Transformation - [Transform Request/Response](https://learn.microsoft.com/en-us/azure/api-management/api-management-policies#transformation), [HTTP/HTTPS - URL Scheme when importing API](https://learn.microsoft.com/en-us/azure/api-management/import-and-publish#import-and-publish-a-backend-api)
+10. Service Health Check - [Health Check Endpoints (step 6)](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-integrate-internal-vnet-appgateway), [Uptime Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/app/availability-overview)
+11. Gateway Performance _(requires Premium SKU for scaling)_
+12. Gateway Node Management _(requires Premium SKU for scaling)_ - [Manual Scaling](https://learn.microsoft.com/en-us/azure/api-management/upgrade-and-scale), [Autoscaling](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-autoscale), [Capacity Metric](https://learn.microsoft.com/en-us/azure/api-management/api-management-capacity), [Multi-region](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-deploy-multi-region)
+13. API Management Tool Integrations - [CI/CD](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/devops/automated-api-deployments-apiops), [Monitoring Integration via Azure Event Hub](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-log-event-hubs?tabs=PowerShell)
+14. API Portal - [Portal Overview](https://learn.microsoft.com/en-us/azure/api-management/developer-portal-overview), [Customize](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-developer-portal-customize), [Revision](https://learn.microsoft.com/en-us/azure/api-management/api-management-get-started-revise-api?tabs=azure-portal)/[Version](https://learn.microsoft.com/en-us/azure/api-management/api-management-get-started-publish-versions)
+15. API Monitoring & Metrics - [Alerts](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-use-azure-monitor#set-up-an-alert-rule), [Reports](https://learn.microsoft.com/en-us/azure/api-management/howto-use-analytics)
+16. Deployment Options _(may require Premium SKU if multiple self-hosted gateway deployments are required)_ - [Self Hosted Gateway Overview](https://learn.microsoft.com/en-us/azure/api-management/self-hosted-gateway-overview), [Deploy to AKS](https://learn.microsoft.com/en-us/azure/api-management/how-to-deploy-self-hosted-gateway-azure-kubernetes-service), [Deploy to Kubernetes - Other](https://learn.microsoft.com/en-us/azure/api-management/how-to-deploy-self-hosted-gateway-kubernetes), [Deploy to Docker](https://learn.microsoft.com/en-us/azure/api-management/how-to-deploy-self-hosted-gateway-docker)
+17. Developer Experience - [Subscriptions](https://learn.microsoft.com/en-us/azure/api-management/api-management-subscriptions), [Users](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-create-or-invite-developers) / [Groups](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-create-groups), [Developer Portal](https://learn.microsoft.com/en-us/azure/api-management/developer-portal-overview)
+18. Assess Migration Impacts - Create Secrets: [CLI](https://learn.microsoft.com/en-us/cli/azure/apim/nv?view=azure-cli-latest#az-apim-nv-create), [REST](https://learn.microsoft.com/en-us/rest/api/apimanagement/named-value/create-or-update?view=rest-apimanagement-2022-08-01&tabs=HTTP), [Apigee Migration Tool](https://github.com/Azure/Apigee_to_APIM_migration_tool)
